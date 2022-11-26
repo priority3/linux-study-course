@@ -24,7 +24,7 @@ int main(){
 		// do something
 		std::cout<<"child 2 \n";
 		lockf(fd[1],1,0);
-		write(fd[1],"Child process 2 is sending a message! \n",50);
+		write(fd[1],"Child process 2 is sending a message!",50);
 		lockf(fd[1],0,0);
 		exit(0);
 	}
