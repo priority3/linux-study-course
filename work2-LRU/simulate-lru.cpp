@@ -1,15 +1,5 @@
 #include <bits/stdc++.h>
 using namespace std;
-/**
- *  * LRU算法的实现：可以使用一个结构体，来储存对应的数据
- *   * 那么使用一个vector动态数组来储存当前的物理块中的内容
- *    * 那么每访问一次就更新结构体中的value值，那么对vector数组
- *     * 进行对应sort排序,即按照value从大到小排序，然后每次弹出队尾
- *      * 将最小的value值的结构体弹出
- *       * 测试数据如下 
- *       16 4
- *       0 1 2 4 3 4 5 1 2 5 1 2 3 4 5 6
- *        * **/
 struct LRU_node{
 	int key, value;
 };
