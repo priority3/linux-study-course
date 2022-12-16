@@ -5,8 +5,6 @@ struct Info
 {
 	int value;
 	int count;  
-	int begin;
-	int end;     
 };
 
 void init(struct Info info[])
@@ -17,11 +15,8 @@ void init(struct Info info[])
 		if(i == 0)  info[i].value = 1;
 		else info[i].value = info[i-1].value*2;
 		info[i].count = 0;   
-		info[i].begin = 0;
-		info[i].end = 0;    
 	}
 	info[10].count = 1; 
-	info[10].end = 1023;    
 }
 
 void print(struct Info info[])
@@ -65,8 +60,6 @@ void buddy(struct Info info[], int num)
 						for(k=i; k<j; k++)
 						{
 							info[k].count = 1;
-							info[k].begin = info[k].value;
-							info[k].end = info[k].begin*2 - 1;         
 						}   
 						printf("Allocate pages succefully!\n");
 						return ;             
